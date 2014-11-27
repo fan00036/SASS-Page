@@ -1,0 +1,24 @@
+.col-4:hover
+{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+}
+
+.col-4:hover
+{
+        background:#79C6FF;
+	p{
+	color: #fff;
+	}
+	h4{
+		color: #FFD773;
+	}
+
+}
+.col-3:hover
+{
+        -webkit-transform: rotateZ(-10deg);
+        -ms-transform: rotateZ(-10deg);
+        transform: rotateZ(-10deg);
+}

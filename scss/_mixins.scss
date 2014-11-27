@@ -1,0 +1,71 @@
+/******************************************************************
+
+Mixins & Extensions
+
+******************************************************************/
+
+
+@mixin equalSpaced($number_of_columns, $margin, $container_width){
+	width: ($container_width - ($margin * ($number_of_columns - 1)))/ $number_of_columns;
+	margin-left: $margin;
+	&:first-child{
+	margin-left:0;
+	}
+}
+
+
+@mixin equalSpacedwborder($number_of_columns, $margin, $border, $container_width){
+	width: ($container_width - ($margin * ($number_of_columns - 1)))/ $number_of_columns - ( 2 * $border);
+	margin-left: $margin;
+	&:first-child{
+	margin-left:0;
+	}
+}
+
+
+
+
+// ----------------- //
+//  clearfix
+//  @extend .clearfix;
+// ----------------- //
+.clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+// ----------------- //
+//  box-shadow
+//  @include box-shadow(entire-string);
+// ----------------- //
+@mixin box-shadow($shadows) {
+  -moz-box-shadow: $shadows;
+  -webkit-box-shadow: $shadows;
+  box-shadow: $shadows;
+}
+
+ .box{
+  @include box-shadow(1px 1px 6px #888888);
+  display:block;
+  float:left;
+  border:5px solid #0362ab;
+  
+  
+  height:320px;
+  background-color: white;
+	
+}
+.box p{
+  padding:1rem;
+  font-family:calibri,sans-serif;
+  color:#666;
+}
+
+

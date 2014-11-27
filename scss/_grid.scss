@@ -1,0 +1,89 @@
+html{
+	background-color: #fdfded;
+}
+
+
+.wrapper {
+	max-width: $breakpoint-large;
+	margin: 0 auto;
+}
+
+
+.row{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	@extend .clearfix;
+	
+}
+    
+.iconic {
+  padding: 20px 20px 10px 10px;
+  float: right;
+  fill: white;
+  stroke: white;
+}
+
+.col-3{
+	@include box-shadow(1px 1px 6px #888888);
+	h3{
+		font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif";
+		font-size: 3rem;
+		margin: 0;
+		text-shadow: 1px 1px white;
+		padding-left: 2px; 
+	}
+	p{
+	  margin:0.5rem 2rem 0 2rem;
+      font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+		color: #fff;
+  }
+}
+
+.col-4{
+	h4{
+		font-family: Cambria,Georgia,serif;
+		font-size: 1.5rem;
+		text-align: center;
+		color: #D77013;
+	    text-shadow: 2px 2px 5px #ccc;
+	}
+	@extend .box;
+	margin-top: 50px;
+	margin-bottom: 100px;
+	position:relative;
+}
+
+
+
+
+
+@media only screen and (max-width: $breakpoint-small) {
+	    
+	.col-4{
+		width: 41%;
+		margin-left: 5%;
+		float: left;
+}	
+    .col-3{
+margin: 40px;
+padding: 5%;
+}
+}
+
+
+@media only screen and (min-width: $breakpoint-large) {
+	
+
+	
+	.col-3{
+	height: 400px;
+	@include equalSpaced(3,35px, $breakpoint-large);
+	float: left;
+		
+}
+    .col-4{
+	@include equalSpacedwborder(4,25px,5, $breakpoint-large);
+	float: left;
+}
+
+}
